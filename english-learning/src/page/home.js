@@ -22,6 +22,10 @@ export default function Home() {
     >
       <h1>Learning form</h1>
       <Form
+        wrapperCol={{
+          offset: 2,
+          span: 16,
+        }}
         name="basic"
         initialValues={{
           remember: true,
@@ -32,7 +36,7 @@ export default function Home() {
         style={{ fontSize: "150%" }}
       >
         <Form.Item
-          label="Word"
+          label={<b style={{fontSize:15}}>Word</b>}
           name="word"
           rules={[
             {
@@ -45,9 +49,13 @@ export default function Home() {
         </Form.Item>
 
         <Form.Item
+        wrapperCol={{
+          offset: 3,
+          span: 50,
+        }}
           name="wordtype"
           valuePropName="value"
-          label="Type"
+          label = {<b style={{fontSize:15}}>Type</b>}
           rules={[
             {
               required: true,
@@ -64,9 +72,12 @@ export default function Home() {
         </Form.Item>
 
         <Form.Item
-          label="Sentence"
+          wrapperCol={{
+            offset: 1,
+            span: 16,
+          }}
+          label={<b style={{fontSize:15}}>Sentence</b>}
           name="sentence"
-          
           rules={[
             {
               required: true,
@@ -74,12 +85,15 @@ export default function Home() {
             },
           ]}
         >
-          <Input.TextArea cols={50}
-          rows={3}/>
+          <Input.TextArea cols={50} rows={3} />
         </Form.Item>
 
         <Form.Item
-          label="My sentence"
+        wrapperCol={{
+          offset: 0,
+          span: 16,
+        }}
+          label={<b style={{fontSize:15}}>My Sentence</b>}
           name="mySentence"
           rules={[
             {
@@ -88,8 +102,7 @@ export default function Home() {
             },
           ]}
         >
-          <Input.TextArea cols={50}
-          rows={3}/>
+          <Input.TextArea cols={50} rows={3} />
         </Form.Item>
 
         <Form.Item
