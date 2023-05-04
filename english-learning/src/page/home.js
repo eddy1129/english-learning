@@ -20,7 +20,7 @@ export default function Home() {
         flexDirection: "column",
       }}
     >
-      <h1>English form</h1>
+      <h1>Learning form</h1>
       <Form
         name="basic"
         initialValues={{
@@ -45,8 +45,8 @@ export default function Home() {
         </Form.Item>
 
         <Form.Item
-          name="type"
-          valuePropName="checked"
+          name="wordtype"
+          valuePropName="value"
           label="Type"
           rules={[
             {
@@ -56,15 +56,17 @@ export default function Home() {
           ]}
         >
           <Radio.Group>
-            <Radio.Button value="easy">Easy</Radio.Button>
-            <Radio.Button value="mid">Mid</Radio.Button>
-            <Radio.Button value="hard">Hard</Radio.Button>
+            <Radio.Button value="verb">Verb</Radio.Button>
+            <Radio.Button value="noun">Noun</Radio.Button>
+            <Radio.Button value="adj">Adjective</Radio.Button>
+            <Radio.Button value="adverb">Adverb</Radio.Button>
           </Radio.Group>
         </Form.Item>
 
         <Form.Item
           label="Sentence"
           name="sentence"
+          
           rules={[
             {
               required: true,
@@ -72,7 +74,8 @@ export default function Home() {
             },
           ]}
         >
-          <Input.TextArea />
+          <Input.TextArea cols={50}
+          rows={3}/>
         </Form.Item>
 
         <Form.Item
@@ -85,7 +88,8 @@ export default function Home() {
             },
           ]}
         >
-          <Input.TextArea />
+          <Input.TextArea cols={50}
+          rows={3}/>
         </Form.Item>
 
         <Form.Item
