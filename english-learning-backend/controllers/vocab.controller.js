@@ -2,7 +2,7 @@ const models = require("../models");
 const Vocab = models.vocab;
 
 exports.create = async (req, res) => {
-  if (!req.body.word || !req.body.wordType || !req.body.learning_date) {
+  if (!req.body.word || !req.body.wordType || !req.body.learning_date|| !req.body.ori_sentence|| !req.body.my_sentence) {
     res.status(400).send({
       message: "The request is empty.",
     });
@@ -13,6 +13,8 @@ exports.create = async (req, res) => {
     word: req.body.word,
     wordType: req.body.wordType,
     learning_date: req.body.learning_date,
+    ori_sentence: req.body.ori_sentence,
+    my_sentence: req.body.my_sentence,
   };
 
   try {

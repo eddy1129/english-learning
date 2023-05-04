@@ -13,6 +13,12 @@ module.exports = (sequelize) => {
     wordType: {
       type: DataTypes.STRING,
     },
+    ori_sentence: {
+      type: DataTypes.STRING,
+    },
+    my_sentence: {
+      type: DataTypes.STRING,
+    },
     learning_date: {
       type: DataTypes.STRING,
     },

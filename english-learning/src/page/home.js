@@ -33,7 +33,7 @@ export default function Home() {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
-        style={{ fontSize: "150%" }}
+        style={{ fontWeight: "800" }}
       >
         <Form.Item
           label={<b style={{fontSize:15}}>Word</b>}
